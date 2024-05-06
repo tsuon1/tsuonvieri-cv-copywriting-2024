@@ -608,6 +608,32 @@ strong
     padding-left: 0; /* Tar bort indrag för hela listan */
 }
 
+.expandable-content h4 
+{ 
+    visibility: hidde;
+}
+
+
+.expandable-content ul li {
+    position: relative; /* Establishes a positioning context */
+    padding-left: 25px; /* Provides space for the bullet, adjust as needed */
+}
+
+.expandable-content ul li::before {
+
+    color: grey; /* Sets the color of the bullet */
+    position: absolute; /* Positions the bullet absolutely within the li */
+    left: 0; /* Aligns the bullet to the left edge of the list item */
+    top: 0; /* Aligns the bullet to the top of the list item */
+    font-size: 16px; /* Size of the bullet, adjust based on your design */
+}
+
+.category ul li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+    text-indent: -px; /* Adjusts text start position to match the first line */
+}
+
+
 .category h4::before {
     
     margin-right: 5px; /* Ger lite utrymme mellan pricken och rubriken */
@@ -980,6 +1006,39 @@ margin: 20px 0 20px;
   .date2 {
     display: none;
   }
+
+  .modal-content {
+    width: 100vw; /* Ställer in bredden på viewportens bredd */
+    max-width: none; /* Tar bort max-bredd */
+    margin: 0; /* Tar bort marginaler */
+}
+
+.popup-inner {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Tar bort border från iframe */
+    /* Du kan behöva lägga till följande om din iframe innehåller en border i dess design */
+    box-shadow: none;
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 1001; /* Säkerställer att stängningsknappen är ovanför iframe */
+}
   
 }
 
